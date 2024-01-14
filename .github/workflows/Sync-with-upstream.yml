@@ -25,8 +25,8 @@ jobs:
       with:
         fetch-depth: 0
         lfs: true
-        #token: '${{ secrets.GITHUB_TOKEN }}'
-        token: '${{ secrets.WORKFLOW_TOKEN }}'
+        token: '${{ secrets.GITHUB_TOKEN }}'
+        #token: '${{ secrets.WORKFLOW_TOKEN }}'
     - name: Set git identity
       run : |
         #git config --global user.email ${{ secrets.EMAIL }} && git config --global user.name github-actions
