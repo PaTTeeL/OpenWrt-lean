@@ -25,7 +25,7 @@ jobs:
       with:
         fetch-depth: 0
         lfs: true
-        token: ${{ secrets.PAT }}
+        token: '${{ secrets.PAT }}'
         #token: '${{ secrets.GITHUB_TOKEN }}'
         #token: '${{ secrets.WORKFLOW_TOKEN }}'
     - name: Set git identity
