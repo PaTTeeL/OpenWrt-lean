@@ -12,6 +12,7 @@ on:
     - cron: 0 0 1 * *
   workflow_dispatch:
 env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   UPSTREAM_REPO: https://github.com/coolsnowwolf/lede.git
 jobs:
   sync:
@@ -22,7 +23,7 @@ jobs:
       with:
         fetch-depth: 0
         lfs: true
-        token: ${{ secrets.WORKFLOW_TOKEN }}
+        #token: ${{ secrets.WORKFLOW_TOKEN }}
         #token: ${{ secrets.GITHUB_TOKEN }}
     - name: Set git identity
       run : |
