@@ -23,14 +23,14 @@ jobs:
       with:
         fetch-depth: 0
         lfs: true
-        #token: ${{ secrets.WORKFLOW_TOKEN }}
-        #token: ${{ secrets.GITHUB_TOKEN }}
+        token: '${{ secrets.GITHUB_TOKEN }}'
+        #token: '${{ secrets.WORKFLOW_TOKEN }}'
     - name: Set git identity
       run : |
         #git config user.name github-actions
         #git config user.email github-actions@github.com
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        #git config --local user.email "action@github.com"
+        #git config --local user.name "GitHub Action"
     - name: Pull upstream
       run: git pull $UPSTREAM_REPO --no-edit --rebase --strategy-option=ours
     - name: Push commits
